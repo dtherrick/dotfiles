@@ -1,0 +1,3 @@
+alias rt3="ssh root@t3-crd-analytics00.test3.cyber.sas.com"
+alias rt2="ssh root@t2-crd-analytics00.test2.cyber.sas.com"
+alias ds01b="ssh daherr@d-crd-datasci01big.dev.cyber.sas.com"

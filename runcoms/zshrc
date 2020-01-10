@@ -1,0 +1,48 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# export PATH=$HOME/.poetry/bin:$PATH
+
+# alias rt3="ssh root@t3-crd-analytics00.test3.cyber.sas.com"
+# alias rt2="ssh root@t2-crd-analytics00.test2.cyber.sas.com"
+# alias ds01b="ssh daherr@d-crd-datasci01big.dev.cyber.sas.com"
+
+# Source dotfiles in the system directory
+for DOTFILE in `find ${HOME}/.dotfiles/system`;
+do
+    [ -f "${DOTFILE}" ] && source "${DOTFILE}";
+done
+
+# bindkey -v
+# bindkey -M viins 'jk' vi-cmd-mode
+# bindkey '^R' history-incremental-search-backward
+# bindkey '^P' up-history
+# bindkey '^N' down-history
+# bindkey '^?' backward-delete-char
+# bindkey '^h' backward-delete-char
+# bindkey '^w' backward-kill-word
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f "${HOME}/.p10k.zsh" ]] || source "${HOME}/.p10k.zsh"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+eval "$(pyenv init -)"
