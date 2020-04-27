@@ -31,3 +31,4 @@ done
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 eval "$(pyenv init -)"
+export GOPATH=$HOME/Code/golang
