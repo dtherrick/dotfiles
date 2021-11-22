@@ -1,3 +1,5 @@
 [user]
 	name = Damian Herrick
 	email = damian.herrick@sas.com
+[init]
+	defaultBranch = trunk
