@@ -19,6 +19,8 @@ fi
 
 # Customize to your needs...
 
+eval "$(pyenv init -)"
+
 # Source dotfiles in the system directory
 for DOTFILE in `find ${HOME}/.dotfiles/system`;
 do
@@ -30,5 +32,4 @@ done
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-eval "$(pyenv init -)"
-export GOPATH=$HOME/Code/golang
+export PATH="$HOME/.poetry/bin:$PATH"
