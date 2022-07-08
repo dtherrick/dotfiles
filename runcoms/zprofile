@@ -62,3 +62,6 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# Created by `pipx` on 2022-01-28 19:46:30
+export PATH="$PATH:/Users/daherr/.local/bin"

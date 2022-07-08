@@ -33,3 +33,6 @@ done
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Created by `pipx` on 2022-01-28 19:46:30
+export PATH="$PATH:/Users/daherr/.local/bin"
