@@ -20,6 +20,7 @@ fi
 # Customize to your needs...
 
 eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Source dotfiles in the system directory
 for DOTFILE in `find ${HOME}/.dotfiles/system`;
@@ -31,8 +32,6 @@ done
 [[ ! -f "${HOME}/.p10k.zsh" ]] || source "${HOME}/.p10k.zsh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PATH="$HOME/.poetry/bin:$PATH"
 
 # Created by `pipx` on 2022-01-28 19:46:30
 export PATH="$PATH:/Users/daherr/.local/bin"
