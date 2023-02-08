@@ -1,0 +1,7 @@
+export PATH=$HOME/.poetry/bin:$HOME/Code/shell_scripts:$HOME/.pyenv/bin:$PATH
+export ARTIFACTORY_KEY=AKCp5aTGhuY4qYVf4Jn8w6yHpc6FvBjZBRs17xFodYQe6jakppmR2tXJ9xK56r6zwHeLB3SSA
+export CAS_HOST_RDCGRD="rdcgrd113.unx.sas.com"
+export CAS_HOST_ORGRD="orgrd061.unx.sas.com"
+export CAS_PORT=23404
+export CAS_DEFAULT_CASLIB="CASUSER(daherr)"
+export HLS_CASELAW_AUTH=1a6da6295beb0c603494b609d056c49bce6ce143
