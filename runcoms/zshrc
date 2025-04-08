@@ -26,7 +26,7 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Source dotfiles in the system directory
 for DOTFILE in `find ${HOME}/.dotfiles/system`;
@@ -41,15 +41,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export PATH="$HOME/.local/bin:$PATH"
 
-# Created by `pipx` on 2022-01-28 19:46:30
-export PATH="$PATH:/Users/daherr/.local/bin"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/daherr/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
