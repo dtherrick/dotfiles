@@ -1,9 +1,7 @@
 " my vim configuration
-" working this over time to make it ideal.
-"
-" focus is to make it function well in a python / sas development environment.
 "
 " DTH :: 2017-08-02
+"     :: revised 2025-04-08
 
 " basic settings
 inoremap jk <ESC>
@@ -33,9 +31,14 @@ set relativenumber " show relative line numbers
 set showcmd
 set cursorline
 set showmatch
+set ruler
 
 set incsearch
 set hlsearch
+
+" ensure that we write in unix line ending not dos/windows
+set fileformat=unix
+"set nobinary
 
 " give me expected backspace behavior.
 set backspace=indent,eol,start
@@ -94,6 +97,13 @@ if (exists('+colorcolumn'))
     set colorcolumn=120
     highlight ColorColumn ctermbg=0
 endif
+
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
 autocmd BufWritePost *.py call Flake8()
 
