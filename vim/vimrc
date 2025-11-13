@@ -108,3 +108,5 @@ set guicursor+=i:blinkwait10
 autocmd BufWritePost *.py call Flake8()
 
 com! FormatJSON %!python -m json.tool
+
+command! VisualBlock normal! <C-v>
