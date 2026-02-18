@@ -11,4 +11,6 @@ ln -sf $DOTFILES_PATH/.claude/commands ~/.claude/get-shit-done
 ln -sf $DOTFILES_PATH/.claude/commands ~/.claude/hooks
 ln -sf $DOTFILES_PATH/.claude/commands ~/.claude/skills
 
+# Install Playwright browsers using the version already in frontend/package.json
+cd frontend && npx playwright install --with-deps chromium && cd ..
 
